@@ -1,0 +1,39 @@
+﻿@model Web.Models.Provider
+@{
+    ViewBag.Title = "Добавление производителя";
+}
+    <div class="con12">
+        <div class="container12 text-center">
+            <h2>Добавление производителя</h2>
+            <form asp-action="createProvider" asp-controller="home" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="CompanyName" class="control-label">Название Компании</label>
+                    <input type="text" asp-for="CompanyName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Country" class="control-label">Страна</label>
+                    <input type="text" asp-for="Country" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label">Адрес</label>
+                    <input type="text" asp-for="Address" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label">Номер телефона</label>
+                    <input type="number" asp-for="Phone" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Добавить" class="btn btn-primary" />
+                </div>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="Create">1</a>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="CreateLaptops">2</a>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="CreateProvider">3</a>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="CreateMonitors">4</a>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="CreateManipulators">5</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

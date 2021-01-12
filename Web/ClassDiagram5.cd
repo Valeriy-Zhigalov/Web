@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Web.Models.Acoustic">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAQgAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Acoustic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Periphery" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Computer">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAQAQgAAAAAAAAASAAAAAABAAAAgAAEAAAAQ=</HashCode>
+      <FileName>Models\Computer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Products" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.ComputerRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAADAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ComputerRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Web.Models.EmailService" Collapsed="true">
+    <Position X="16" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\EmailService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Models.Laptop">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAQgAAAAgAAAASAAAAAABAAAAgAAEAAAAQ=</HashCode>
+      <FileName>Models\Laptop.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Products" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Manipulator">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAQgAAAAAAQAAEAAABAAAAgAAAACAAA=</HashCode>
+      <FileName>Models\Manipulator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Periphery" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Monitor">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQCAAAQgAEAAAAQAAAAAABAAQAgAAAAAAAA=</HashCode>
+      <FileName>Models\Monitor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Periphery" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Order">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAABAAAAAAgAAAEAACAAAAEAAAJAAAAAAAAAgQ=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Remonts" />
+      <Property Name="Products" />
+      <Property Name="IdentityUser" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Periphery">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQgAAAQAQAAAAAQAAAAAAAAAABgAAAAAAAQ=</HashCode>
+      <FileName>Models\Periphery.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Products" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Product">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAAAAAEAAAAIAAAAAAAAAAAABAQAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Models.ProductRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProductRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Web.Models.Provider">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAABAAAAAAAAAIAAAACAAAAIAAAAAQ=</HashCode>
+      <FileName>Models\Provider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Products" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Remont">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAgAAAAgAAAAAAAAAAAABAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Remont.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Models.ShopCart" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAFAAAIAAAAAAAAAAEAAAAAAACAAAAAAAAAAACA=</HashCode>
+      <FileName>Models\ShopCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Models.ShopCartItem">
+    <Position X="16" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABBAQAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ShopCartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Models.User">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Identity.IdentityUser&lt;TKey&gt;" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Identity.IdentityUser" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

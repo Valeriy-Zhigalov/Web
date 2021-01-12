@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Web.Models.Computer>
+
+@{
+    ViewBag.Title = "Все компьютеры";
+}
+
+<div class="card-group products">
+    @foreach (var item in Model)
+    {
+
+        <div class="card-group product-wrapper">
+            <div class="card " style="width: 18rem;">
+                @if (item.Image != null)
+                {
+                    <div class="product-img">
+                        <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" />
+                    </div>
+                }
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.Model</p>
+                    <p class="card-text">@item.CPU</p>
+                    <p class="card-text">@item.MotherBoard</p>
+                    <p class="card-text">@item.GraphicsCard</p>
+                    <p class="card-text">@item.HardDisk</p>
+                    <p class="card-text">@item.Price</p>
+                    <form asp-controller="Home" asp-action="Delete" asp-route-ComputerId="@item.ComputerId" method="post">
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Купить
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-dark sticky-top">
+            <div class="container-fluid bg-dark">
+                <a class="navbar-brand"><img src="~/image/head1.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav mL-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-action="Index">Главная</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="CabinetAdmin">Личный кабинет</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" data-section="info" data-target="info" asp-area="" asp-controller="Home" asp-action="Index" target="info">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" data-section="info" data-target="info" asp-area="" asp-controller="Home" asp-action="Index" target="info">Корзина</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Каталог
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" asp-controller="Home" asp-action="CatalogComputers">Настольные ПК</a>
+                            <a class="dropdown-item" href="CatalogMon">Ноутбуки</a>
+                            <a class="dropdown-item" href="#">Переферия</a>
+                        </div>
+                    </div>
+                </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <p>@User.Identity.Name</p>
+
+                    <form method="post" asp-controller="Account" asp-action="Logout">
+                        <input type="submit" value="Выход" class="btn btn-primary" />
+                    </form>
+                }
+                else
+                {
+                    <a class="navbar-brand text-white" asp-controller="Account" asp-action="Login">Вход</a>
+                    <a class="navbar-brand text-white" asp-controller="Account" asp-action="Register">Регистрация</a>
+                }
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+    @*<footer class="border-top footer text-muted">
+
+                <div class="row padding text-center foot">
+                    <div class="col-12">
+                        <h2>Наши социальные сети</h2>
+                    </div>
+                    <div class="col-12 social padding">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+
+        </footer>*@
+    <footer class="container-fluid">
+        <div class="container-fluid">
+            <div class=" text-center">
+                <div class="col-12">
+                    <h2>Наши социальные сети</h2>
+                </div>
+                <div class="col-12 social padding">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

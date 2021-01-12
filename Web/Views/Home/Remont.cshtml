@@ -1,0 +1,26 @@
+﻿@model Web.Models.Remont
+@{
+    ViewBag.Title = "Запись на ремонт";
+}
+<div class="con12">
+    <div class="container12 text-center">
+        <h2>Запись на ремонт</h2>
+        <form asp-action="createRemont" asp-controller="home" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="NameProduct" class="control-label">Название устройства</label>
+                <input type="text" asp-for="NameProduct" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Описание проблемы</label>
+                <input type="text" asp-for="Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailRem" class="control-label">Email адресс для связи</label>
+                <input type="text" asp-for="EmailRem" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Записаться" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

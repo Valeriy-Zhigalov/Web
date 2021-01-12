@@ -1,0 +1,38 @@
+﻿@model Web.Models.Computer
+@{
+    ViewBag.Title = "Удаление товара";
+}
+<div class="con12">
+    <div class="container12 text-center">
+        <h2>Добавление нового товара</h2>
+        <form asp-action="createImage" asp-controller="home" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Название</label>
+                <input type="text" asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label">Модель</label>
+                <input type="number" asp-for="Model" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Цена</label>
+                <input type="number" asp-for="Price" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label">Картинка</label>
+                <input type="file" asp-for="Image" class="form-control" />
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary" asp-controller="Home" asp-action="Delete" value="Удалить товар товар"  />
+            </div>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <a class="btn btn-primary" asp-controller="Home" asp-action="Create">1</a>
+                    <a class="btn btn-primary" asp-controller="Home" asp-action="CreateCategory">2</a>
+                    <a class="btn btn-primary" asp-controller="Home" asp-action="CreateProvider">3</a>
+                    <a class="btn btn-primary" asp-controller="Home" asp-action="CreateProvider">4</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

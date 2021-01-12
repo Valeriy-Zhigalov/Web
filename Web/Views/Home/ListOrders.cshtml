@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Web.Models.Order>
+@{
+    ViewBag.Title = "Список заказов";
+}
+<div class="con12">
+    <div class="container12 text-center">
+        <h2>Список заказов</h2>
+        <table class="table">
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td class="text-white">@order.id</td>
+                    <td class="text-white">@order.email</td>
+                    <td class="text-white">@order.Date</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" asp-controller="Home" asp-action="SendMessage">Отправить сообщение</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
